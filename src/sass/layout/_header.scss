@@ -6,21 +6,16 @@
 header {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: [navegador]50px [banner]auto [flecha]minmax(auto, 80px);
+    grid-template-rows: [navegador]50px [banner]auto ;
     grid-template-areas:
         "navegador"
-        "banner"
-        "flecha";
+        "banner";
 
     // BANNER
     .banner img {
         width: 100%;
     }
-    .flecha{
-        grid-area: flecha;
-        justify-self: center;
-        align-self: center;
-    }
+    
 }
 
 // MENU
@@ -38,7 +33,7 @@ header {
     // clic
     input:checked ~ .desplegable {
         display: grid;
-        background-color: grey;
+        background-color: map-get($colores , marron_mas_claro );
         position: absolute;
         margin: 0;
         padding: 20%;
